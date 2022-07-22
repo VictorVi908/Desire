@@ -17,6 +17,9 @@
         padding: 0;
         cursor: pointer;
     }
+    &__btn-menu{
+        display: none;
+    }
 }
 .logo {
     margin: 0 auto;
@@ -234,14 +237,19 @@
     background: rgba(#dfdfdf, 0.5);
     padding: 12px 14px;
     position: relative;
-    z-index: 99;
+    z-index: 60;
     &__list {
         display: flex;
+        overflow-x: auto;
+    }
+    &__item{
+        position: relative;
+        padding-right: 8px;
     }
     &__item::after {
         content: "/";
-        margin-left: -4px;
-        margin-right: 4px;
+
+        position: absolute;
     }
     &__item:last-child::after {
         display: none;
@@ -402,7 +410,7 @@
     background-image: url("../images/decor-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 600px;
+   // min-height: 600px;
     &_title {
         @extend %title-font;
         font-size: 60px;
@@ -746,6 +754,9 @@
 .map {
     margin-top: -53px;
     margin-bottom: 50px;
+    iframe{
+        height: 578px;
+    }
 }
 
 .contact {
@@ -868,7 +879,7 @@
         top: 0;
         bottom: 0;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         background-color: rgba(#fff, 0.6);
         color: $title;
@@ -1292,8 +1303,6 @@
         color: #a1a1a1;
     }
 
-    &__form-labelinput {
-    }
 
     &__form-btn {
         background: $title;
@@ -1307,3 +1316,5 @@
         color: #fffff0;
     }
 }
+
+@import "media";
