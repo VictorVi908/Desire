@@ -174,7 +174,7 @@
 .rightside-menu {
     position: absolute;
     overflow: auto;
-    z-index: 100;
+    z-index: 66;
     right: 0;
     top: 0;
     bottom: 0;
@@ -265,6 +265,7 @@
     &__inner {
         padding-bottom: 70px;
         position: relative;
+        
         &::after {
             content: "";
             position: absolute;
